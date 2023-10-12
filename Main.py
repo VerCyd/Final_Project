@@ -122,4 +122,22 @@ df = pd.DataFrame(data)
 # df.loc[df["Vandens telkinio pavadinimas"] == "Snaigynas", "Pugzlys (Biomase)"] = 0.011
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-print(df)
+# Create a graph with ponds and lakes in the districts:
+
+Municipality = df.groupby("Savivaldybe").count()
+Municipality.plot(kind="bar", color="darkred", alpha=0.75, label=False)
+plt.legend()
+plt.ylabel("Sum of Ponds and Lakes")
+plt.title("Ponds and lakes in the districts")
+plt.show()
+
+# Changing ----------
+# biomass_kg = 100
+# df["Plesrios(kg)"] = (df["Biomase, kg"] * df["Plesriu zuvu biomase, %"] / biomass_kg).round(3)
+# df.head(10)
+# df.to_csv("Ezerai_ir_zuvys.csv", index=False)
+#
+# sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
+# plt.title("Biomass and predatory graph")
+# plt.savefig("grafikasNr2.png")
+# plt.show()
