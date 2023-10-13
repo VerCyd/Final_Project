@@ -1,10 +1,8 @@
 # Import required Python libraries:
 import pandas as pd
-from bs4 import BeautifulSoup
-import requests
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 # Data taken from the csv file from web www.biip.lt:
@@ -123,21 +121,49 @@ df = pd.DataFrame(data)
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
 # Create a graph with ponds and lakes in the districts:
+# x = df.groupby("Savivaldybe").count()
+# total = df["Vandens telkinio pavadinimas"].max()
+# plt.bar(x.index, x["Vandens telkinio pavadinimas"], color="darkred", edgecolor="black")
+# plt.ylim(0, 10)
+# plt.xlabel("Districts")
+# plt.xticks(rotation=90)
+# plt.subplots_adjust(bottom=0.35, top=0.85)
+# plt.ylabel("Counted Lake and Pond")
+# plt.title("Counted Lake and Ponds by Districts")
+# plt.savefig("grafikasNr1.png")
+# plt.show()
 
-Municipality = df.groupby("Savivaldybe").count()
-Municipality.plot(kind="bar", color="darkred", alpha=0.75, label=False)
-plt.legend()
-plt.ylabel("Sum of Ponds and Lakes")
-plt.title("Ponds and lakes in the districts")
-plt.show()
-
-# Changing ----------
+# Compare the share of predatory fish in the total catch
 # biomass_kg = 100
 # df["Plesrios(kg)"] = (df["Biomase, kg"] * df["Plesriu zuvu biomase, %"] / biomass_kg).round(3)
 # df.head(10)
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
-#
+
+# Creating graph biomass x predatory:
 # sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
 # plt.title("Biomass and predatory graph")
 # plt.savefig("grafikasNr2.png")
+# plt.show()
+
+# Note: Dar neveikia. Liko 2 grafikai is 4. Sita reikia koreguoti, gaunasi mesmale.
+# df_column1 = df["Eserys (Gausumas)"]
+# df_column2 = df["Karsis (Gausumas)"]
+# df_column3 = df["Kuoja (Gausumas)"]
+# df_column4 = df["Plakis (Gausumas)"]
+# df_column5 = df["Raude (Gausumas)"]
+# df_column6 = df["Pugzlys (Gausumas)"]
+# x = df["Vandens telkinio pavadinimas"]
+# plt.plot(x, df_column1, label="Eserys", marker="o")
+# plt.plot(x, df_column2, label="Karsis", marker="o")
+# plt.plot(x, df_column3, label="Kuoja", marker="o")
+# plt.plot(x, df_column4, label="Plakis", marker="o")
+# plt.plot(x, df_column5, label="Raude", marker="o")
+# plt.plot(x, df_column6, label="Pugzlys", marker="o")
+# plt.ylabel("Population")
+# plt.xlabel("Lakes and Ponds")
+# plt.xticks(x, rotation=90)
+# plt.subplots_adjust(bottom=0.35, top=0.85)
+# plt.title("Fish population by Lake or Ponds")
+# # plt.subplots_adjust(wspace=7)
+# # plt.savefig("grafikasNr1.png")
 # plt.show()
