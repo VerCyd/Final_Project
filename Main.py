@@ -2,7 +2,7 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+import plotly.express as px
 
 # Duomenys paimti iš CSV failo, iš tinklapio www.biip.lt:
 data = pd.read_csv('Ezerai_ir_zuvys.csv')
@@ -136,12 +136,12 @@ plt.show()
 biomase_kg = 100
 df["Plesrios(kg)"] = (df["Biomase, kg"] * df["Plesriu zuvu biomase, %"] / biomase_kg).round(3)
 df.head(10)
-df.to_csv("Ezerai_ir_zuvys.csv", index=False)
+# df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
 # Sukuriamas grafikas biomase pagal plėšrias žuvis:
 sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
 plt.title("Biomasė pagal plėšrias žuvis")
-plt.savefig("GrafikasNr2.png")
+# plt.savefig("GrafikasNr2.png")
 plt.show()
 
 # Kuriamas grafikas, kiek kokių žuvų yra gausiausia:
@@ -155,10 +155,11 @@ labels = ["Ešerys", "Karšis", "Kuoja", "Plakis", "Raudė", "Pugžlys"]
 plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%1.1f%%",
         colors=sns.color_palette("Set2"))
 plt.title("Žuvų paplitimas")
-plt.savefig("GrafikasNr3.png")
+# plt.savefig("GrafikasNr3.png")
 plt.show()
 
 # Kuriamas grafikas, žuvys užimančios dydžiausią biomasės dalį:
+
 data1 = df["Eserys (Biomase)"].sum()
 data2 = df["Karsis (Biomase)"].sum()
 data3 = df["Kuoja (Biomase)"].sum()
@@ -166,11 +167,8 @@ data4 = df["Plakis (Biomase)"].sum()
 data5 = df["Raude (Biomase)"].sum()
 data6 = df["Pugzlys (Biomase)"].sum()
 labels = ["Ešerys", "Karšis", "Kuoja", "Plakis", "Raudė", "Pugžlys"]
-explode = [0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
-plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%.0f%%",
-        colors=sns.color_palette("pastel"), explode=explode, pctdistance=0.80, startangle=90)
-hole = plt.Circle((0, 0), 0.65, facecolor="white")
-plt.gcf().gca().add_artist(hole)
-plt.title("Žuvys užimančios dydžiausią biomasę")
-# plt.savefig("GrafikasNr4.png")
-plt.show()
+df = px.data.tips()
+fig = px.pie(df, values=[data1, data2, data3, data4, data5, data6], labels=labels, names=labels,
+             title="Žuvys užimančios dydžiausią biomasę", color_discrete_sequence=px.colors.sequential.RdBu)
+fig.update_traces(textposition='inside', textinfo='percent+label')
+fig.show()
