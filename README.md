@@ -56,11 +56,11 @@ GrafikasNr4:
 ## Išvados:
 Pagal atliktus tyrimus, galima teigti, kad daugiausia patikrintų ežerų ir tvenkinių buvo Ignalinos ir Molėtų rajonuose (nieko keisto, nes čia yra daugiausia ežerų).
 Tyrimai rodo, kad plėšrios žuvys naikina neplėšrias žuvis, nes jų biomasė per metus laiko sparčiai pakilo. 
-Atsižvialngiant į paskutiniuosius grafikus yra aišku, kad labiausiai paplitusi žuvis tirtuose ežeruose ar tvenkiniuose yra Kuoja, o antroje vietoje Plakis. Bet atsižvelgiant į žuvų biomasę, Plakis nukrenta į žemesnę vietą. Plakis sudaro tik 7% biomasės, kur Ešerys - 18%, Karšis - 8% ir Kuoja - 66%. Didesnis žuvies paplitimas nereiškia didesnės biomasės. Biomasė priklauso ir nuo žuvies svorio. 
+Atsižvialgiant į 4 ir 5 grafikus yra aišku, kad tirtuose ežeruose ar tvenkiniuose labiausiai labiausiai paplitusi žuvis yra Kuoja, o antroje vietoje Plakis. Bet atsižvelgiant į žuvų biomasę, Plakis nukrenta į žemesnę vietą. Plakis sudaro tik 7% biomasės, kur Ešerys - 18%, Karšis - 8% ir Kuoja - 66%. Darytina išvada, kad didesnis žuvies paplitimas nereiškia didesnės biomasės. Biomasė priklauso ir nuo žuvies svorio. 
 
 
 # Kur žvejoti:
-Darbas buvo atliktas kai uošvis pasigyrė pagavęs didelę žuvį Ignalinos rajone ir neatskleidė kokiame ežere pagavo.
+Darbas buvo atliktas, kai uošvis pasigyrė pagavęs didelę žuvį Ignalinos rajone ir neatskleidė kokiame ežere pagavo.
 
 ## Trumpas darbo aprašymas:
 Darbe naudotos bibliotekos: geocoder, carrier, folium, phonenumbers.
