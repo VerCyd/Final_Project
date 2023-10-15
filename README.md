@@ -49,7 +49,8 @@ GrafikasNr3:
 10. Atliekami skaičiavimai ir su atliktais skaičiavimais kuriamas grafikas naudojant matplotlib.pyplot biblioteką ir pie grafiką. Grafikas vaizduoja kokia yra žuvų biomasė visuose tirtuose ežeruose ar tvenkiniuose.
 
 GrafikasNr4:
-![image](https://github.com/VerCyd/Final_Project/assets/144364760/ab9e62e0-a7d6-42c4-8ffe-aebc27ddfb96)
+![image](https://github.com/VerCyd/Final_Project/assets/144364760/46418598-f5d6-43a5-be9b-618a701fc16c)
+
 
 
 ## Išvados:
