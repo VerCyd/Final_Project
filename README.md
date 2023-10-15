@@ -59,7 +59,7 @@ Tyrimai rodo, kad plėšrios žuvys naikina neplėšrias žuvis, nes jų biomas�
 Atsižvialgiant į 4 ir 5 grafikus yra aišku, kad tirtuose ežeruose ar tvenkiniuose labiausiai labiausiai paplitusi žuvis yra Kuoja, o antroje vietoje Plakis. Bet atsižvelgiant į žuvų biomasę, Plakis nukrenta į žemesnę vietą. Plakis sudaro tik 7% biomasės, kur Ešerys - 18%, Karšis - 8% ir Kuoja - 66%. Darytina išvada, kad didesnis žuvies paplitimas nereiškia didesnės biomasės. Biomasė priklauso ir nuo žuvies svorio. 
 
 
-# Kur žvejoti:
+# Kur žvejoti.py
 Darbas buvo atliktas, kai uošvis pasigyrė pagavęs didelę žuvį Ignalinos rajone ir neatskleidė kokiame ežere pagavo.
 
 ## Trumpas darbo aprašymas:
@@ -70,7 +70,7 @@ Programos tikslas: įvedus telefono numerį parodyti vietą kurioje žvejoja žv
 
 ## Išvados:
 
-Įvedus savo telefono numerį, rašo ne esamą operatorių, o koks buvo įsigyjus sim kortelę. Kordinates parodo irgi blogai. Įvedus gautas kordinates į google map's, rodo, kad aš esu prie Medininkų miške, nors mano telefonas yras su manimi ir aš esu Ignalinos rajone. 
+Įvedus uošvio telefono numerį, rašo ne esamą operatorių, o koks buvo įsigyjus sim kortelę. Kordinates rodo netikslias. Įvedus gautas kordinates į www.openstreetmap.org, rodo, kad uošvis žvejoja prie Medininkų, Kauno rajone, nors žinau, kad žvejoja Ignalinos rajone. P.S. programą reikia tobulinti dėl tikslesnių kordinačių nustatymo.
 
 
 
