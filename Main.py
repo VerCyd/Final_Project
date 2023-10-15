@@ -119,7 +119,7 @@ df = pd.DataFrame(data)
 # df.loc[df["Vandens telkinio pavadinimas"] == "Snaigynas", "Pugzlys (Biomase)"] = 0.011
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-# Sukuriamas grafiką, ežerų ir tvenkinių kiekis rajonuose:
+# Sukuriamas grafiką, patikrintų ežerų ir tvenkinių kiekis rajonuose:
 x = df.groupby("Savivaldybe").count()
 total = df["Vandens telkinio pavadinimas"].max()
 plt.bar(x.index, x["Vandens telkinio pavadinimas"], color="darkred", edgecolor="black")
@@ -128,19 +128,19 @@ plt.xlabel("Rajonai")
 plt.xticks(rotation=90)
 plt.subplots_adjust(bottom=0.35, top=0.85)
 plt.ylabel("Ežerų ir tvenkinių kiekis")
-plt.title("Suskaičiuoti ežerai ir tvenkiniai pagal rajonus")
+plt.title("Suskaičiuoti patikrinti ežerai ir tvenkiniai pagal rajonus")
 # plt.savefig("GrafikasNr1.png")
 plt.show()
 
 # Lyginame kokią dalį užima plėšri žuvis pagal visų sugautų žuvų kiekį:
-biomass_kg = 100
-df["Plesrios(kg)"] = (df["Biomase, kg"] * df["Plesriu zuvu biomase, %"] / biomass_kg).round(3)
+biomase_kg = 100
+df["Plesrios(kg)"] = (df["Biomase, kg"] * df["Plesriu zuvu biomase, %"] / biomase_kg).round(3)
 df.head(10)
 df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
 # Sukuriamas grafikas biomase pagal plėšrias žuvis:
 sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
-plt.title("Biomase pagal plėšrias žuvis")
+plt.title("Biomasė pagal plėšrias žuvis")
 # plt.savefig("GrafikasNr2.png")
 plt.show()
 
@@ -151,7 +151,7 @@ data3 = df["Kuoja (Gausumas)"].sum()
 data4 = df["Plakis (Gausumas)"].sum()
 data5 = df["Raude (Gausumas)"].sum()
 data6 = df["Pugzlys (Gausumas)"].sum()
-labels = ["Eserys", "Karsis", "Kuoja", "Plakis", "Raude", "Pugzlys"]
+labels = ["Ešerys", "Karšis", "Kuoja", "Plakis", "Raudė", "Pugžlys"]
 plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%1.1f%%",
         colors=sns.color_palette("Set2"))
 plt.title("Žuvų paplitimas")
@@ -165,7 +165,7 @@ data3 = df["Kuoja (Biomase)"].sum()
 data4 = df["Plakis (Biomase)"].sum()
 data5 = df["Raude (Biomase)"].sum()
 data6 = df["Pugzlys (Biomase)"].sum()
-labels = ["Eserys", "Karsis", "Kuoja", "Plakis", "Raude", "Pugzlys"]
+labels = ["Ešerys", "Karšis", "Kuoja", "Plakis", "Raudė", "Pugžlys"]
 explode = [0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
 plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%.0f%%",
         colors=sns.color_palette("pastel"), explode=explode, pctdistance=0.80, startangle=90)
