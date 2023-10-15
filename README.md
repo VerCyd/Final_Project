@@ -21,7 +21,7 @@ Atlikti darbai projekte:
 Tai pagrindinis baigiamojo darbo failas, kuriame buvo atlikti visi duomenų ištraukimai, papildymai, vizualizacijos ir skaičiavimai.
 
 Smulkus darbo aprašymas:
-1. Pridėtas CSV failas į Python programą duomenų analizai iš tinklapio www.biip.lt
+1. Pridėtas CSV failas į Python programą duomenų analizei iš tinklapio www.biip.lt
 2. Kadangi su CSV faile trūko lentelių, kokie yra nurodyti www.biip.lt tinklapyje, buvo pridėti rankiniu būdu.
 3. Pakeisti stulpelių pavadinimai į norimus naudojant rename komandą.
 4. Formatuoti duomenys, kad būtų galima atlikti skaičiavimus. Iš "-" pakeista į "0" naudojant replace komandą.
@@ -32,8 +32,8 @@ GrafikasNr1:
 
 ![image](https://github.com/VerCyd/Final_Project/assets/144364760/6e8f46bc-ab0a-44e4-bf54-5a020c2fb7fe)
 
-7. Lyginu kokią dalį plėšri žuvis sudaro visu sugautų žuvų kiekiu. Plėšrių žuvų biomasę procentais verčiame į kilogramus naudojan Pandas.
-8. Kuriamas grafikas naudojan Seaborn bilbioteką ir lineplot grafiką, kuris nurodo, kaip keičiasi plėšių žuvų biomasė.
+7. Lyginu kokią dalį plėšri žuvis sudaro su visų sugautų žuvų kiekiu. Plėšrių žuvų biomasę procentais verčiame į kilogramus naudojant Pandas.
+8. Kuriamas grafikas naudojant Seaborn biblioteką ir lineplot grafiką, kuris nurodo, kaip keičiasi plėšrių žuvų biomasė.
 
 GrafikasNr2:
 
@@ -46,7 +46,7 @@ GrafikasNr3:
 ![image](https://github.com/VerCyd/Final_Project/assets/144364760/de8af25c-e2bb-4743-8ad7-34631b415035)
 
 
-10. tliekami skaičiavimai ir su atliktais skaičiavimais kuriamas grafikas naudojant matplotlib.pyplot biblioteką ir pie grafiką. Grafikas vaizduoja kokia yra žuvų biomasė visuose tirtuose ežeruose ar tvenkiniuose.
+10. Atliekami skaičiavimai ir su atliktais skaičiavimais kuriamas grafikas naudojant matplotlib.pyplot biblioteką ir pie grafiką. Grafikas vaizduoja kokia yra žuvų biomasė visuose tirtuose ežeruose ar tvenkiniuose.
 
 GrafikasNr4:
 ![image](https://github.com/VerCyd/Final_Project/assets/144364760/ab9e62e0-a7d6-42c4-8ffe-aebc27ddfb96)
