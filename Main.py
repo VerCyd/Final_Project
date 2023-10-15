@@ -169,6 +169,6 @@ data6 = df["Pugzlys (Biomase)"].sum()
 labels = ["Ešerys", "Karšis", "Kuoja", "Plakis", "Raudė", "Pugžlys"]
 df = px.data.tips()
 fig = px.pie(df, values=[data1, data2, data3, data4, data5, data6], labels=labels, names=labels,
-             title="Žuvys užimančios dydžiausią biomasę", color_discrete_sequence=px.colors.sequential.RdBu)
+             title="Žuvys užimančios didžiausią biomasę", color_discrete_sequence=px.colors.sequential.RdBu)
 fig.update_traces(textposition='inside', textinfo='percent+label')
 fig.show()
