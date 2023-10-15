@@ -141,7 +141,7 @@ df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 # Sukuriamas grafikas biomase pagal plėšrias žuvis:
 sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
 plt.title("Biomasė pagal plėšrias žuvis")
-# plt.savefig("GrafikasNr2.png")
+plt.savefig("GrafikasNr2.png")
 plt.show()
 
 # Kuriamas grafikas, kiek kokių žuvų yra gausiausia:
@@ -155,7 +155,7 @@ labels = ["Ešerys", "Karšis", "Kuoja", "Plakis", "Raudė", "Pugžlys"]
 plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%1.1f%%",
         colors=sns.color_palette("Set2"))
 plt.title("Žuvų paplitimas")
-# plt.savefig("GrafikasNr3.png")
+plt.savefig("GrafikasNr3.png")
 plt.show()
 
 # Kuriamas grafikas, žuvys užimančios dydžiausią biomasės dalį:
