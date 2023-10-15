@@ -8,7 +8,7 @@ Darbą paruošė: Kęstutis Čepulis
 
 Darbas apima Lietuvos tvenkinius ir ežerus kuriuose buvo atliktas žuvų išteklių tyrimas. Visa informacija traukta iš tinklapio www.biip.lt
 
-Darbui atlikti buvo naudota Python kalba, CSV failas ir Python bibliotekos: Pandas, Seaborn, Matplotlib.
+Darbui atlikti buvo naudota Python kalba, CSV failas ir Python bibliotekos: Pandas, Seaborn, Matplotlib, Plotly.
 
 Atlikti darbai projekte:
 1. Duomenų ištraukimas iš CSV failo.
@@ -49,6 +49,7 @@ GrafikasNr3:
 10. tliekami skaičiavimai ir su atliktais skaičiavimais kuriamas grafikas naudojant matplotlib.pyplot biblioteką ir pie grafiką. Grafikas vaizduoja kokia yra žuvų biomasė visuose tirtuose ežeruose ar tvenkiniuose.
 
 GrafikasNr4:
+![image](https://github.com/VerCyd/Final_Project/assets/144364760/ab9e62e0-a7d6-42c4-8ffe-aebc27ddfb96)
 
 
 ## Išvados:
@@ -57,14 +58,14 @@ Tyrimai rodo, kad plėšrios žuvys naikina neplėšrias žuvis, nes jų biomas�
 Atsižvialngiant į paskutiniuosius grafikus yra aišku, kad labiausiai paplitusi žuvis tirtuose ežeruose ar tvenkiniuose yra Kuoja, o antroje vietoje Plakis. Bet atsižvelgiant į žuvų biomasę, Plakis nukrenta į žemesnę vietą. Plakis sudaro tik 7% biomasės, kur Ešerys - 18%, Karšis - 8% ir Kuoja - 66%. Didesnis žuvies paplitimas nereiškia didesnės biomasės. Biomasė priklauso ir nuo žuvies svorio. 
 
 
-# Papildomas Darbas:
+# Kur žvejoti:
 Darbas buvo atliktas kai uošvis pasigyrė pagavęs didelę žuvį Ignalinos rajone ir neatskleidė kokiame ežere pagavo.
 
-## Trumpas papildomo darbo aprašymas:
+## Trumpas darbo aprašymas:
 Darbe naudotos bibliotekos: geocoder, carrier, folium, phonenumbers.
 
 ## Programa:
-Programos tikslas, įvedus telefono numerį parodyti vietą kurioje žvejoja žvejys, nurodytų jo buvimo vietą - kordinates. 
+Programos tikslas: įvedus telefono numerį parodyti vietą kurioje žvejoja žvejys, parodytų kordinates. 
 
 ## Išvados:
 
