@@ -1,15 +1,14 @@
-# Import required Python libraries:
+# Importuojame Python bibliotekas:
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import numpy as np
 
 
-# Data taken from the csv file from web www.biip.lt:
+# Duomenys paimti iš CSV failo, iš tinklapio www.biip.lt:
 data = pd.read_csv('Ezerai_ir_zuvys.csv')
 df = pd.DataFrame(data)
 
-# Inserting additional zuvys(gausumas) and zuvys(Biomase) in to csv file:
+# Pridedame papildomus stulpelius rankiniu būdu į CSV failą:
 # df["Kuoju Gausumas"] = 0
 # df["Kuoju Biomase"] = 0
 # df["Plakis Gausumas"] = 0
@@ -20,7 +19,7 @@ df = pd.DataFrame(data)
 # df["Pugzlys Biomase"] = 0
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-# Changing columns name:
+# Keičiame/koreguojame stulpelių pavadinimus:
 # df = df.rename(columns={"Biomase (kg)i": "Biomase, kg", "Gausumas (vnt.)i": "Gausumas (vnt)",
 #                         "Plesriu zuvu gausumas (%)i": "Plesriu zuvu (gausumas), %", "Plesriu zuvu biomase (%)i":
 #                         "Plesriu zuvu (biomase), %", "Karsis_Gausumas": "Karsis (Gausumas)", "Eserys(Gausumas)":
@@ -28,15 +27,15 @@ df = pd.DataFrame(data)
 #                         "Plakis Gausumas": "Plakis (Gausumas)", "Plakis Biomase": "Plakis (Biomase)",
 #                         "Raude Gausumas": "Raude (Gausumas)", "Raude Biomase": "Raude (Biomase)", "Pugzlys Gausumas":
 #                         "Pugzlys (Gausumas)", "Pugzlys Biomase": "Pugzlys (Biomase)",
-#                         "zuvu istekliu bukles indeksasi": "Zuvu istekliu bukles indeksasi"}, inplace=False)
+#                         "zuvu istekliu bukles indeksasi": "Zuvu istekliu bukles indeksai"}, inplace=False)
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-# Changing and formating values:
+# Formatuojame esamus rezultatus lentelėje:
 # df["Eserys (Gausumas)"] = df["Eserys (Gausumas)"].replace({"-": 0})
 # df["Karsis (Gausumas)"] = df["Karsis (Gausumas)"].replace({"-": 0})
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-# Changing the results of Gausumas and Biomase for the fish (data taken from web www.biip.lt):
+# Koreguojame naujuose stulpeliuose reikšmes, rankiniu būdu, paimdami jas iš tinklapio www.biip.lt:
 # df.loc[df["Vandens telkinio pavadinimas"] == "Aisetas", "Kuoja (Gausumas)"] = 10
 # df.loc[df["Vandens telkinio pavadinimas"] == "Alnis", "Kuoja (Gausumas)"] = 23.1
 # df.loc[df["Vandens telkinio pavadinimas"] == "Antakmeniu ezeras", "Kuoja (Gausumas)"] = 81.5
@@ -120,50 +119,58 @@ df = pd.DataFrame(data)
 # df.loc[df["Vandens telkinio pavadinimas"] == "Snaigynas", "Pugzlys (Biomase)"] = 0.011
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-# Create a graph with ponds and lakes in the districts:
+# Sukuriamas grafiką, ežerų ir tvenkinių kiekis rajonuose:
 # x = df.groupby("Savivaldybe").count()
 # total = df["Vandens telkinio pavadinimas"].max()
 # plt.bar(x.index, x["Vandens telkinio pavadinimas"], color="darkred", edgecolor="black")
 # plt.ylim(0, 10)
-# plt.xlabel("Districts")
+# plt.xlabel("Rajonai")
 # plt.xticks(rotation=90)
 # plt.subplots_adjust(bottom=0.35, top=0.85)
-# plt.ylabel("Counted Lake and Pond")
-# plt.title("Counted Lake and Ponds by Districts")
-# plt.savefig("grafikasNr1.png")
+# plt.ylabel("Ežerų ir tvenkinių kiekis")
+# plt.title("Suskaičiuoti ežerai ir tvenkiniai pagal rajonus")
+# plt.savefig("GrafikasNr1.png")
 # plt.show()
 
-# Compare the share of predatory fish in the total catch
+# Lyginame kokią dalį užima plėšri žuvis pagal visų sugautų žuvų kiekį:
 # biomass_kg = 100
 # df["Plesrios(kg)"] = (df["Biomase, kg"] * df["Plesriu zuvu biomase, %"] / biomass_kg).round(3)
 # df.head(10)
 # df.to_csv("Ezerai_ir_zuvys.csv", index=False)
 
-# Creating graph biomass x predatory:
-# sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
-# plt.title("Biomass and predatory graph")
-# plt.savefig("grafikasNr2.png")
+# Sukuriamas grafikas biomase pagal plėšrias žuvis:
+sns.lineplot(data=df, x="Plesrios(kg)", y="Biomase, kg")
+plt.title("Biomase pagal plėšrias žuvis")
+plt.savefig("GrafikasNr2.png")
+plt.show()
+
+# Kuriamas grafikas, kiek kokių žuvų yra gausiausia:
+# data1 = df["Eserys (Gausumas)"].sum()
+# data2 = df["Karsis (Gausumas)"].sum()
+# data3 = df["Kuoja (Gausumas)"].sum()
+# data4 = df["Plakis (Gausumas)"].sum()
+# data5 = df["Raude (Gausumas)"].sum()
+# data6 = df["Pugzlys (Gausumas)"].sum()
+# labels = ["Eserys", "Karsis", "Kuoja", "Plakis", "Raude", "Pugzlys"]
+# plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%1.1f%%",
+#         colors=sns.color_palette("Set2"))
+# plt.title("Žuvų paplitimas")
+# plt.savefig("GrafikasNr3.png")
 # plt.show()
 
-# Note: Dar neveikia. Liko 2 grafikai is 4. Sita reikia koreguoti, gaunasi mesmale.
-# df_column1 = df["Eserys (Gausumas)"]
-# df_column2 = df["Karsis (Gausumas)"]
-# df_column3 = df["Kuoja (Gausumas)"]
-# df_column4 = df["Plakis (Gausumas)"]
-# df_column5 = df["Raude (Gausumas)"]
-# df_column6 = df["Pugzlys (Gausumas)"]
-# x = df["Vandens telkinio pavadinimas"]
-# plt.plot(x, df_column1, label="Eserys", marker="o")
-# plt.plot(x, df_column2, label="Karsis", marker="o")
-# plt.plot(x, df_column3, label="Kuoja", marker="o")
-# plt.plot(x, df_column4, label="Plakis", marker="o")
-# plt.plot(x, df_column5, label="Raude", marker="o")
-# plt.plot(x, df_column6, label="Pugzlys", marker="o")
-# plt.ylabel("Population")
-# plt.xlabel("Lakes and Ponds")
-# plt.xticks(x, rotation=90)
-# plt.subplots_adjust(bottom=0.35, top=0.85)
-# plt.title("Fish population by Lake or Ponds")
-# # plt.subplots_adjust(wspace=7)
-# # plt.savefig("grafikasNr1.png")
+# Kuriamas grafikas, žuvys užimančios dydžiausią biomasės dalį:
+# data1 = df["Eserys (Biomase)"].sum()
+# data2 = df["Karsis (Biomase)"].sum()
+# data3 = df["Kuoja (Biomase)"].sum()
+# data4 = df["Plakis (Biomase)"].sum()
+# data5 = df["Raude (Biomase)"].sum()
+# data6 = df["Pugzlys (Biomase)"].sum()
+# labels = ["Eserys", "Karsis", "Kuoja", "Plakis", "Raude", "Pugzlys"]
+# explode = [0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+# plt.pie([data1, data2, data3, data4, data5, data6], labels=labels, autopct="%.0f%%",
+#         colors=sns.color_palette("pastel"), explode=explode, pctdistance=0.80, startangle=90)
+# hole = plt.Circle((0, 0), 0.65, facecolor="white")
+# plt.gcf().gca().add_artist(hole)
+# plt.title("Žuvys užimančios dydžiausią biomasę")
+# plt.savefig("GrafikasNr4.png")
 # plt.show()
