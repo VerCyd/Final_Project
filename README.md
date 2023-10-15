@@ -26,10 +26,15 @@ Smulkus darbo aprašymas:
 3. Pakeisti stulpelių pavadinimai į norimus naudojant rename komandą.
 4. Formatuoti duomenys, kad būtų galima atlikti skaičiavimus. Iš "-" pakeista į "0" naudojant replace komandą.
 5. Į pridėtus papildomus stulpelius pridėti reikiami rezultatai iš www.biip.lt tinklapio naudojant loc komandą.
-6. Atlikti reikiami skaičiavimai ir sukurtas pirmas grafikas naudojant matplotlib.pyplot biblioteką. Grafikas nurodo, kiek ežerų ir tvenkinių buvo patikrinta tam tikruose rajonuose:
-  ![image](https://github.com/VerCyd/Final_Project/assets/144364760/6e8f46bc-ab0a-44e4-bf54-5a020c2fb7fe)
+6. Atlikti reikiami skaičiavimai ir sukurtas grafikas naudojant matplotlib.pyplot biblioteką ir bar grafiką. Grafikas nurodo, kiek ežerų ir tvenkinių buvo patikrinta tam tikruose rajonuose:
+ 
+GrafikasNr.1  
+![image](https://github.com/VerCyd/Final_Project/assets/144364760/6e8f46bc-ab0a-44e4-bf54-5a020c2fb7fe)
 
-7. 
+7. Lyginu kokią dalį plėšri žuvis sudaro visu sugautų žuvų kiekiu. Plėšrių žuvų biomasę procentais verčiame į kilogramus naudojan Pandas.
+8. Kuriamas grafikas naudojan Seaborn bilbioteką ir lineplot grafiką, kuris nurodo, kaip keičiasi plėšių žuvų biomasė.
+GrafikasNr2
+![image](https://github.com/VerCyd/Final_Project/assets/144364760/d7fadf9c-51ac-44b9-8c33-1f159a290bf5)
 
 
 
