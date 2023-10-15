@@ -21,7 +21,15 @@ Atlikti darbai projekte:
 Tai pagrindinis baigiamojo darbo failas, kuriame buvo atlikti visi duomenų ištraukimai, papildymai, vizualizacijos ir skaičiavimai.
 
 Smulkus darbo aprašymas:
-1. 
+1. Pridėtas CSV failas į Python programą duomenų analizai iš tinklapio www.biip.lt
+2. Kadangi su CSV faile trūko lentelių, kokie yra nurodyti www.biip.lt tinklapyje, buvo pridėti rankiniu būdu.
+3. Pakeisti stulpelių pavadinimai į norimus naudojant rename komandą.
+4. Formatuoti duomenys, kad būtų galima atlikti skaičiavimus. Iš "-" pakeista į "0" naudojant replace komandą.
+5. Į pridėtus papildomus stulpelius pridėti reikiami rezultatai iš www.biip.lt tinklapio naudojant loc komandą.
+6. Atlikti reikiami skaičiavimai ir sukurtas pirmas grafikas naudojant matplotlib.pyplot biblioteką. Grafikas nurodo, kiek ežerų ir tvenkinių buvo patikrinta tam tikruose rajonuose:
+  ![image](https://github.com/VerCyd/Final_Project/assets/144364760/6e8f46bc-ab0a-44e4-bf54-5a020c2fb7fe)
+
+7. 
 
 
 
