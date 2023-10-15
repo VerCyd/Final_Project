@@ -58,8 +58,18 @@ Atsižvialngiant į paskutiniuosius grafikus yra aišku, kad labiausiai paplitus
 
 
 # Papildomas Darbas:
+Darbas buvo atliktas smalsumo sumetimais ir įsitikinti ar rezultatai yra tikslūs.
+
+## Trumpas papildomo darbo aprašymas:
+Darbe naudotos bibliotekos: geocoder, carrier, folium, phonenumbers.
 
 
+## Programa:
+Programos tikslas, įvedus telefono numerį parodyti jo buvimo vietą, parašytų kuriai šaliai priklauso numeris, nurodytų operatoriaus pavadinimą ir kordinates, kur šiuo metu esi. 
+
+## Išvados:
+
+Įvedus savo telefono numerį, rašo ne esamą operatorių, o koks buvo įsigyjus sim kortelę. Kordinates parodo irgi blogai. Įvedus gautas kordinates į google map's, rodo, kad aš esu prie Medininkų miške, nors mano telefonas yras su manimi ir aš esu Ignalinos rajone. 
 
 
 
