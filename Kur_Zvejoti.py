@@ -18,7 +18,7 @@ print(service_name)
 geocoder = OpenCageGeocode(key)
 query = str(location)
 result = geocoder.geocode(query)
-print(result)
+# print(result)
 
 lat = result[0]['geometry']['lat']
 lng = result[0]['geometry']['lng']
