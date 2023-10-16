@@ -6,7 +6,7 @@ Projekto tema: Lietuvos geografinės analizės projektas
 Darbą paruošė: Kęstutis Čepulis
 ## Trumpas darbo aprašymas:
 
-Darbas apima Lietuvos tvenkinius ir ežerus kuriuose buvo atliktas žuvų išteklių tyrimas. Visa informacija traukta iš tinklapio www.biip.lt
+Darbas apima Lietuvos tvenkinius ir ežerus kuriuose buvo atliktas žuvų išteklių tyrimas. Visa informacija traukta iš tinklapio www.biip.lt (Biologinės įvairovės informacinė platforma).
 
 Darbui atlikti buvo naudota Python kalba, CSV failas ir Python bibliotekos: Pandas, Seaborn, Matplotlib, Plotly.
 
