@@ -22,7 +22,7 @@ Tai pagrindinis baigiamojo darbo failas, kuriame buvo atlikti visi duomenų išt
 
 Smulkus darbo aprašymas:
 1. Pridėtas CSV failas į Python programą duomenų analizei iš tinklapio www.biip.lt
-2. Kadangi su CSV faile trūko lentelių, kokie yra nurodyti www.biip.lt tinklapyje, buvo pridėti rankiniu būdu.
+2. Kadangi CSV faile trūko lentelių, kokie yra nurodyti www.biip.lt tinklapyje, buvo pridėti rankiniu būdu.
 3. Pakeisti stulpelių pavadinimai į norimus naudojant rename komandą.
 4. Formatuoti duomenys, kad būtų galima atlikti skaičiavimus. Iš "-" pakeista į "0" naudojant replace komandą.
 5. Į pridėtus papildomus stulpelius pridėti reikiami rezultatai iš www.biip.lt tinklapio naudojant loc komandą.
